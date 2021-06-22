@@ -53,3 +53,24 @@
     }
 }
 
+.calendario {
+    padding: 0;
+    list-style: none;
+
+    li {
+        padding: $separacion / 2;
+        font-weight: $bold;
+        span {
+            font-weight: $regular;
+        }
+    }
+
+}
+
+.bg-verde .calendario li:nth-child(odd) {
+    background: darken($verde, 10);
+}
+
+.bg-amarillo .calendario li:nth-child(odd) {
+    background: darken($amarillo, 10);
+}
