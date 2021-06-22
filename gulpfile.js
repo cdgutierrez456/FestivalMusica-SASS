@@ -4,7 +4,7 @@ const sass = require('gulp-sass');
 // Funcion de compilacion de SASS
 function css() {
     return src('./src/scss/app.scss')
-            .pipe(sass({outputStyle: 'compressed'}))
+            .pipe(sass({outputStyle: ''}))
             .pipe(dest('./build/css'));
 }
 
@@ -16,4 +16,3 @@ function watchArchivos() {
 exports.css = css;
 exports.watchArchivos = watchArchivos;
 
- 
