@@ -5,6 +5,12 @@ const notify = require('gulp-notify');
 const webp = require('gulp-webp');
 const concat = require('gulp-concat');
 
+// Utilidades CSS
+const autoprefixer = require('autoprefixer');
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
+const soursemaps = require('gulp-soursemaps');
+
 // Funcion de compilacion de SASS
 
 const paths = {
@@ -15,7 +21,10 @@ const paths = {
 
 function css() {
     return src(paths.scss)
-            .pipe(sass({outputStyle: 'compressed'}))
+            .pipe(soursemaps.init())
+            .pipe(sass())
+            .pipe(postcss([autoprefixer(), cssnano()]))
+            .pipe(soursemaps.write('.'))
             .pipe(dest('./build/css'));
 }
 
