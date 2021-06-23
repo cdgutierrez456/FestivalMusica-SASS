@@ -23,4 +23,44 @@
 
 }
 
+.pase {
+    width: 100%;
+    border-spacing: 0;
+    thead {
+        background: $rosa;
+        th {
+            padding: $separacion / 4;
+            color: $blanco;
+            text-transform: uppercase;
+            font-weight: $delgada;
+            font-size: 2rem;
+        }
+    }
+
+    tbody {
+        background: $blanco;
+        td {
+            padding: $separacion / 4;
+            border-bottom: 1px solid #e1e1e1;
+        }
+
+        tr {
+            &:last-of-type {
+                td {
+                    border: none;
+                }
+            }
+        }
+    }
+
+    tfoot {
+        background: $morado;
+        td {
+            padding: $separacion / 4;
+            text-align: center;
+            font-size: 2.5rem;
+            color: $blanco;
+        }
+    }
+}
 
